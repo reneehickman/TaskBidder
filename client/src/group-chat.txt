@@ -1,0 +1,9 @@
+kyle - find out how to display posts
+
+inside sidebar, add the current users star rating to the get request so they only see jobs they are qualified for
+
+Patrick - review and review Container (populate: name, description, stars)
+
+Renee - ToDoList and ToDoItem (populate items, and style)
+
+Mary - Footer

@@ -1,0 +1,19 @@
+.scrolling-quotes h3 {
+  color: white;
+  font-size: 32px;
+}
+
+.scrolling-quotes {
+  width: 49vw;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.scrolling-quotes-container {
+  position: absolute;
+  top: 10%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}

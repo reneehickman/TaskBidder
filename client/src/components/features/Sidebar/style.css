@@ -1,0 +1,26 @@
+.sidebar-container {
+  height: 100vh;
+  width: 30vw;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: grey;
+  transition: transform 1s;
+  text-align: center;
+}
+
+.show {
+  transform: translateX(0);
+}
+
+.hide {
+  transform: translateX(30vw);
+}
+
+.sidebar-container:active {
+  transition: transform 2s;
+}
+
+#market-header {
+  margin-bottom: 15px;
+}

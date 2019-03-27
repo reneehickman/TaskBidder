@@ -1,0 +1,17 @@
+.body-full-pic-container {
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  top: 100px;
+}
+
+.body-full-pic {
+  width: 100%;
+  opacity: 0.93;
+}
+
+.body-content {
+  z-index: 3;
+  position: relative;
+  background: white;
+}

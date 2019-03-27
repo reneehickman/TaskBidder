@@ -1,0 +1,10 @@
+.market-snippet-container {
+  border: 1px solid black;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.market-snippet-container h3 {
+  text-transform: uppercase;
+}

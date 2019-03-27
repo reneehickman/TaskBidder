@@ -1,0 +1,9 @@
+.market-title-link {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.market-title-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
