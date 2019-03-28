@@ -1,0 +1,18 @@
+.userpage-review {
+    border: 1px solid black; 
+    position: absolute;
+    align-self: auto;
+    margin: 55px;
+    padding: 5px 75px;
+}
+
+h3{
+    text-align: center;
+    padding: 5px;
+}
+
+
+#MuiOutlinedInput-multiline-29 {
+    padding: 60px 30px;
+    box-sizing: border-box;
+}

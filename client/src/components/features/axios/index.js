@@ -44,4 +44,24 @@ export const addToDo = post => {
     });
 };
 
+export const addToMarket = post => {
+  console.log('matata');
+  axios
+    .post('/todos/market', {
+      userid: post.userid,
+      title: post.title,
+      description: post.description,
+      //called best_bid in mysql
+      startingBid: post.startingBid,
+      minStar: post.minStar,
+      expiredTime: post.expiredTime
+    })
+    .then(function(response) {
+      console.log(response);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+};
+
 export const updateToDo = post => {};

@@ -46,4 +46,22 @@ router.get('/:id', function(req, res) {
   );
 });
 
+router.post('/market', function(req, res) {
+  console.log('america');
+  let startingBid = parseInt(req.body.startingBid);
+  connection.query(
+    `INSERT INTO market(userId, description, title, best_bid, minStar, expiration_date)VALUE("${
+      req.body.userid
+    }","${req.body.description}", "${req.body.title}", "${startingBid}", "${
+      req.body.minStar
+    }", "${req.body.expiredTime}")`,
+    function(error, results, fields) {
+      if (error) throw error;
+      else {
+        console.log('post made');
+      }
+    }
+  );
+});
+
 module.exports = router;

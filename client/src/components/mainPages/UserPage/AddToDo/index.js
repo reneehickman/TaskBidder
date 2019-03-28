@@ -2,7 +2,7 @@ import React from 'react';
 import Moment from 'react-moment';
 import moment from 'moment';
 import './style.css';
-import { addToDo } from '../../../features/axios';
+import { addToDo, addToMarket } from '../../../features/axios';
 import { connect } from 'react-redux';
 
 class AddToDo extends React.Component {
@@ -32,6 +32,21 @@ class AddToDo extends React.Component {
     });
   }
 
+  handleMarketSubmit = event => {
+    event.preventDefault();
+    let userid = this.props.userid;
+    let { expiredTime, description, title, startingBid, minStar } = this.state;
+    let post = {
+      userid,
+      description,
+      title,
+      startingBid,
+      minStar,
+      expiredTime
+    };
+    addToMarket(post);
+  };
+
   handleSubmit = event => {
     event.preventDefault();
     let userid = this.props.userid;
@@ -49,16 +64,16 @@ class AddToDo extends React.Component {
   };
 
   render() {
+    console.log(this.state);
     const date = new Date();
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <Moment ref={this.timeRef}>{date}</Moment>
           <div className="form-item">
             <label>Title</label>
             <input onChange={this.handleChange} name="title" type="text" />
           </div>
-
           <div className="form-item">
             <label>Description</label>
             <input
@@ -67,7 +82,6 @@ class AddToDo extends React.Component {
               type="text"
             />
           </div>
-
           <div className="form-item">
             <label>Starting Bid</label>
             <input
@@ -76,7 +90,6 @@ class AddToDo extends React.Component {
               type="number"
             />
           </div>
-
           <div className="form-item">
             <label>Minimum Stars to Bid</label>
             <select onChange={this.handleChange} name="minStar">
@@ -87,8 +100,21 @@ class AddToDo extends React.Component {
               <option value="5">5</option>
             </select>
           </div>
-          <button className="submit-btn" type="submit" value="Submit">
-            Submit
+          <button
+            onClick={this.handleSubmit}
+            className="submit-btn"
+            type="submit"
+            value="Add to My Todos"
+          >
+            Add to My Todos
+          </button>
+          <button
+            onClick={this.handleMarketSubmit}
+            className="submit-btn"
+            type="submit"
+            value="Add to MarketPlace"
+          >
+            Add to MarketPlace
           </button>
         </form>
       </div>
