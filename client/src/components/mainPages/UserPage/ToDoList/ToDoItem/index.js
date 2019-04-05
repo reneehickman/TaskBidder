@@ -1,3 +1,18 @@
+// import React from 'react';
+// import './style.css';
+
+// class ToDoItem extends React.Component {
+//   render(props) {
+//     return (
+//       <div>
+//         <h3 class="fto-do-item-chore">change</h3>
+//       </div>
+//     );
+//   }
+// }
+
+// export default ToDoItem;
+
 import React from 'react';
 import './style.css';
 import Button from '@material-ui/core/Button';
