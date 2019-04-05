@@ -13,5 +13,23 @@
 .body-content {
   z-index: 3;
   position: relative;
-  background: white;
+  background: #f9fafb;  /* fallback for old browsers */
+
+}
+
+
+.feature-pic-container{
+  width:100%;
+}
+
+.feature-pic{
+  width:100%;
+}
+
+.footerHome{
+  position: absolute;
+  /* bottom: 0; */
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
 }

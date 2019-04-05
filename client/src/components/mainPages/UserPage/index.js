@@ -6,6 +6,7 @@ import ToDoList from './ToDoList';
 import Header from '../../features/Header';
 import Sidebar from '../../features/Sidebar';
 import { connect } from 'react-redux';
+import Footer from '../../features/Footer';
 import './style.css';
 
 class UserPage extends React.Component {
@@ -17,39 +18,36 @@ class UserPage extends React.Component {
     };
   }
 
-  //////////aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  //////////this axios call needs to find all of the user's todos push those to state, then get all todos that the user won the bid on and push that to state
   componentDidMount() {
-    axios.get(`/todos/${this.props.userId}`).then(result => {
-      this.setState({
-        list: [...this.state.list, result.data]
+    axios
+      .get(`/todos/${this.props.userId}`)
+      .then(result => {
+        this.setState({
+          list: [...this.state.list, ...result.data]
+        });
+      })
+      .then(() => {
+        axios.get(`/todos/market/${this.props.userId}`).then(result => {
+          this.setState({
+            list: [...this.state.list, ...result.data]
+          });
+        });
       });
-    });
   }
-  // console.log(getTodos(this.props.userId));
-  // try {
-  //   const result = await getTodos(this.props.userId);
-  //   console.log(result);
-  //   this.setState({
-  //     list: result
-  //   });
-  // } catch (error) {
-  //   this.setState({
-  //     error
-  //   });
-  // }
 
   render() {
     return (
-      <div>
+      <div className="todo">
         <Header />
         <div className="body">
           <Sidebar />
-          <div class=".userpage-body">
-            <ToDoList />
-            <AddToDo />
-          </div>
+          <ToDoList />
+          <AddToDo />
+
           <ReviewContainer />
         </div>
+        {/* <Footer /> */}
       </div>
     );
   }

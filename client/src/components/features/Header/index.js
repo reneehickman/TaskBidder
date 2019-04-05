@@ -5,8 +5,11 @@ import './style.css';
 class HomePage extends React.Component {
   render() {
     return (
-      <div class="header">
-        <Navbar />
+      <div>
+        <div className="header-brother" />
+        <div className="header">
+          <Navbar />
+        </div>
       </div>
     );
   }

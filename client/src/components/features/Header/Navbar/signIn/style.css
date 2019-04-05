@@ -1,5 +1,9 @@
 .google-login {
-  width: 97%;
+  /* width: 97%; */
+  float:right;
+  padding:0px 20px ;
+  margin-right:20px;
+  margin-top:25px;
 }
 
 .hidden {
@@ -9,3 +13,17 @@
 .block {
   display: block;
 }
+
+
+@media (max-width: 576px){
+  .google-login {
+    width:100%;
+    padding:0px;
+    margin-right:0px;
+    margin-top:5px;
+  }
+
+  button{
+    width:100%;
+  }
+  }

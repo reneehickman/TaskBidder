@@ -1,19 +1,32 @@
 .scrolling-quotes h3 {
-  color: white;
-  font-size: 32px;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  /* padding: 300px 100px 0 100px; */
+  font-family: 'Indie Flower', cursive;
 }
 
 .scrolling-quotes {
-  width: 49vw;
+  /* width: 49vw; */
+  padding:20%;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
-.scrolling-quotes-container {
+/* .scrolling-quotes-container {
   position: absolute;
   top: 10%;
   width: 100vw;
   display: flex;
   justify-content: center;
+} */
+
+.bob{
+  position:relative;
+  top:-25vh;
+  height:0px;
 }
+
+
+

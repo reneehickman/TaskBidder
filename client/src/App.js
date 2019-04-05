@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 import HomePage from './components/mainPages/HomePage';
 import UserPage from './components/mainPages/UserPage';
 import './style.css';
+import { connect } from 'react-redux';
+
 
 class App extends Component {
   // state = { users: [] };
@@ -17,15 +18,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter basename="/todo">
+        {!this.props.isSignedIn ? <HomePage /> : <UserPage />}
+        {/* <BrowserRouter basename="/todo">
           <div>
-            <Route path="/" exact component={HomePage} />
+            <Route path="/home" exact component={HomePage} />
             <Route path="/user" exact component={UserPage} />
           </div>
-        </BrowserRouter>
+        </BrowserRouter> */}
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return { isSignedIn: state.oAuth.isSignedIn };
+};
+export default connect(mapStateToProps)(App);

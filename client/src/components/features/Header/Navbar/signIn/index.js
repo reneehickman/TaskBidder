@@ -24,17 +24,18 @@ class SignIn extends Component {
 
   render() {
     const responseGoogle = response => {
-      this.props.signIn(response.googleId);
-      console.log(response.googleId);
       let user = {
         id: response.googleId,
         email: response.profileObj.email,
         first_name: response.profileObj.givenName,
         last_name: response.profileObj.familyName,
-        star_review: 2
+        star_review: 5
       };
       //if exists, log id to redux, else post
-      getUser(user);
+      getUser(user).then(() => {
+        console.log('your mother trabek');
+        this.props.signIn(response.googleId);
+      });
 
       //     ------ ANY INFORMATION THAT NEEDS TO BE SAVED FOR THE CLIENT NEEDS TO BE SAVED IN THEIR MYSQL ACCOUNT, then we pull it to add it to the website */
     };

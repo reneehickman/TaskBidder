@@ -1,7 +1,13 @@
 .body {
-  margin-top: 100px;
+  background: #f1f1f1;
+  min-height: 78vw;
 }
 
 .userpage-body {
-  display: flex;
+  width: 40vw;
+  /* height:100vh; */
 }
+
+/* .todo {
+  height: 100vh;
+} */

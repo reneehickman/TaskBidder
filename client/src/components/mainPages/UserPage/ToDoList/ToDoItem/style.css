@@ -1,8 +1,27 @@
 .to-do-item-chore {
-  color: #000;
+  /* color: red; */
+  list-style:none;
+  z-index: 1;
+}
+p {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+}
+.complete-button{
+  position: flex;
+  float: left;
+}
+
+.todo-description{
+  font-size: 1em;
+}
+
+.todo-border{
+  border: 1px solid #ddd;
 }
 
 
-.MuiButton-label-118{
-  color:#fff;
+.MuiExpansionPanelSummary-root-232{
+  padding: 0 0px 0 24px;
 }

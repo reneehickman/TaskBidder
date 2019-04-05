@@ -1,11 +1,23 @@
 .nav-container {
-  display: flex;
-  position: absolute;
-  right: 0;
+  /* display: flex; */
+  /* position: absolute; */
+  /* right: 0; */
   height: 100%;
-  align-items: flex-end;
+  /* align-items: flex-end; */
 }
 
 .link {
   margin-right: 20px;
 }
+
+/* button{
+ display:none;
+} */
+
+.logoPic{
+  float:left;
+  margin-top:20px;
+  margin-left:10px;
+}
+
+

@@ -1,12 +1,16 @@
 .sidebar-container {
-  height: 100vh;
-  width: 30vw;
+  height: 91.5vh;
+  width: 40vw;
   position: fixed;
   right: 0;
-  top: 0;
-  background: grey;
+  top: 100px;
+  background: #67727e;
   transition: transform 1s;
   text-align: center;
+  overflow: scroll;
+  z-index: 2;
+  /* border-left: 2px solid #67727e;
+  border-right: 2px solid #67727e; */
 }
 
 .show {
@@ -14,7 +18,7 @@
 }
 
 .hide {
-  transform: translateX(30vw);
+  transform: translateX(40vw);
 }
 
 .sidebar-container:active {
@@ -23,4 +27,8 @@
 
 #market-header {
   margin-bottom: 15px;
+  color: #fff;
+  background-color: #67727e;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }

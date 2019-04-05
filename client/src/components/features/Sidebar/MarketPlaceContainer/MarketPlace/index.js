@@ -30,10 +30,11 @@ class MarketPlace extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <div className="marketplace">
         {this.state.showSnippet ? (
-          <MarketPlaceSnippet
+          <MarketPlaceSnippet 
             handleChange={this.handleChange}
             toggleSnippet={this.toogleSnippet}
             title={this.props.title}
@@ -41,6 +42,7 @@ class MarketPlace extends React.Component {
             userId={this.props.userId}
             startingBid={this.props.startingBid}
             expiration={this.props.expiration}
+            taskId={this.props.taskId}
           />
         ) : (
           <MarketTitleLink
